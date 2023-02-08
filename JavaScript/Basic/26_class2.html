@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES6 class 사용 방법</h1>
+    <p id="demo"></p>   
+    
+    <script>
+    // 1. class keword + class 이름 
+    // 2. constructor 이름은 : constructor를 반드시 사용
+        class User{
+            constructor(name, age, gender){
+            this.age = age;
+            this.name = name;
+            this.gender = gender;
+            }
+            print() {
+                return(
+                    `${this.name} has an age of ${this.age}
+                    and gender of ${this.gender}`
+                );
+            };
+        }
+
+        const Roy = new User('Roy' , '19' , 'Male');
+
+
+         document.getElementById("demo").innerHTML = Roy.print();
+    </script>    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* body tag에 대하여 background color를 변경
+        효과 : body tag 뿐만 아니라, body tag의 모든 자식들에게도 같은 background color가 설정됨
+        => cascading 효과 중의 하나라고 생각 할 수 있음 */
+body{
+    background-color: lightblue;
+}
+h1{
+    color: white; /* declaration = property : value; */
+    /* javascropt 에서는 textAlign으로 변경되어 속성이름이 거의 동일함 */
+    text-align: center;
+}
+p{
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>My First CSS Example</h1>
+<p>This is a paragraph.</p>
+<p>This is a another paragraph.</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Redeclaring a Variable Using var</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    // global scope : function 내에 선언되지 않은 모든 변수들
+    // 정의 : 어디서든지 사용 가능 : function 으로 선언된 함수에서도 global variable 사용 가능
+
+    var  x = 10; // block 밖에 선언된 변수를 일반적으로 global variable
+    // Here x is 10
+    {
+    // block scope 안에 global로 선언된 변수를 local variable로 중복 선언 하여도
+    // global variable로 인식되어 local variable의 값을 수정하면 global variable의 값이 같이 수정됨   
+    var x = 2; // block 안에 선언된 변수를 일반적으로 local variable(지역변수)
+    // Here x is 2
+    }
+    // Here x is 2
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+</body>
+</html>

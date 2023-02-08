@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border : 5px dashed blue;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            background-color: #96D4D4;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML table</h2>
+    <!-- width : 100% => 현재 기준의 화면 전체 -->
+    <!-- %를 사용하는 가장 큰 장점은 HW크기가 변화되더라도 화면내의 크기가 비율을 유지 -->
+    <!-- 데스크탑, 노트패드, 모바일폰 등 반응형으로 적용됨 -->
+    <table style="width:50%">
+        <caption>Company Information</caption>
+        <!-- tr : table row(행) -->
+        <tr>
+            <!-- th : table header -->
+            <!-- 자식 element의 width에서 %의 의미는 부모 크기를 100% 기준으로 적용 -->
+            <th style="width:70%">Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+
+        <tr>
+            <!-- td : table data  -->
+            <td>Com A</td>
+            <td>Person 1</td>
+            <td>Con 1</td>
+        </tr>
+        <tr>
+            <td>Com B</td>
+            <td>Person 2</td>
+            <td>Con 2</td>
+        </tr>
+        <tr>
+            <td>Com C</td>
+            <td>Person 3</td>
+            <td>Con 3</td>
+        </tr>
+        <tr>
+            <td>Com D</td>
+            <td>Person 4</td>
+            <td>Con 4</td>
+        </tr>
+        <tr>
+            <td>Com E</td>
+            <td>Person 5</td>
+            <td>Con 5</td>
+        </tr>
+        <tr>
+            <td>Com F</td>
+            <td>Person 6</td>
+            <td>Con 6</td>
+        </tr>
+    </table>
+</body>
+</html>

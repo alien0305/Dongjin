@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- web browser 가 html 파일 실행순서
+    1. head tag에서 선언된 style과 script에서 선언된 function 내용들을 해석해서 갖고 있음
+        -단, body tag에서 html element들의 객체(인스턴스)가 생성되기 전에 javascript로
+         특정 객체의 필드값을 변경하면 효과가 없음
+    2. body tag에서 html element들을 순서대로 객체를 생성하여 memory에 올림
+    3. body tag안에 작성된 javascript code 내용을 html element가 생성된 경우에는 적용
+    4. web browser 화면에 css, javascript 내용 적용한 결과를 display      
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            // function(함수) : java에서 method와 형식이 비슷함
+            // javascript : function도 있고, method도 존재함
+        function myFunction() {
+          document.getElementById("demo1").innerHTML = 
+          "head tag에서 function 선언하여 사용";
+        }
+        </script>
+        <!-- script 는 여러개 사용 가능 -->
+        <!-- head tag에서 외부 external file을 선언하는 것을 추천 -->
+        <script src="../scripts/myScript.js">
+
+        </script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript in Body</h2>
+    <!-- body tag안에 script를 선언할 때 맨 처음에 선언하면, html객체가 
+    생성되기 전이기 때문에 javascript 명령어를 수행할 수 없다 -->
+    <!-- <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script> -->
+
+    <h1 id="demo"></h1>
+
+    <p id="demo1">head tag에서 script tag 사용 예</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p id="demo2">external file에서 script tag 사용 예</p>
+    <button type="button" onclick="myFunction2()">외부 js파일 테스트</button>
+
+    <!-- script : tag안에 javascript coding 할 수 있음
+    => 1)head tag 안에 사용 가능
+       2) body tag의 어느 곳에서라도 사용 가능
+          => 가능하면 , body tag의 맨 마지막에 사용하는 것을 권장
+       3) external file 로 선언하여 사용 가능 -->
+    <script>
+    document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script>
+</body>
+</html>

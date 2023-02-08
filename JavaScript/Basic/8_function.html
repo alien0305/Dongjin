@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Functions</h2>
+
+    <p>This example calls a function which performs a calculation, and returns the result:</p>
+
+    <p id="demo"></p>
+
+    <script>
+    // 1. function keyword + function name + parameter list
+    // 2. global scope에 존재 (object 에 존재할 때는 function을 method 라고 부름)
+    // 3. parameter list 의 형식 : 변수 이름 1 , 변수 이름 2 (데이터타입이 존재하지 않음 = 의미가없음)
+    // 4. return값이 없거나, return 명령어를 사용하지 않으면 undefined를 return
+    //  -> 모든 function은 return값이 있어야 하는 것이 javascript 문법
+    //  -> function return 값을 사용하는 경우는 반드시 return을 사용해야 함
+    
+    function myFunction(p1, p2) {
+    return p1 + p2;
+    }
+    document.getElementById("demo").innerHTML = myFunction("hello", "javascript");
+    </script>
+</body>
+</html>

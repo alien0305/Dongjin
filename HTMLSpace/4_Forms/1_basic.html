@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>HTML Forms</h2>
+<!-- action : web server에 있는 application program -->
+<form action="/action_page.php">
+    <!-- for attribute의 value가 input tag의 id attribute value를 의미
+    for 의 역할 : label 을 마우스로 클릭하더라도 해당 input text가 활성화시킴 -->
+  <label for="fname">First name:</label><br>
+ <!-- type : input tag에서 사용하는데, 입력 유형을 의미
+    value attribute : text edit box의 초기값을 설정 없으면 빈칸
+    name attribute : server에 key의 역할하는 이름
+    => 예를 들면 서버에 데이터 전달할 때 key=value로 전달하는데, fname="John"으로 전달함
+    id : css나, label등 다른 tag에서 사용하는 목적
+-->
+  <input type="text" id="fname" name="fname" value="John" ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"autofocus><br><br>
+ <!-- type="submit" => 확인버튼, 누르면 동시에 서버로 데이터를 전송 -->
+ <!-- submit button을 클릭하면 server에 fname=John&lname=Doe 형태로 데이터 전달함  -->
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* p : tag selector */
+        p{
+            text-align: center;
+            color: red;
+        }
+        /* # : id를 의미, para1은 id의 value값을 의미 */
+        /* p selector와 *para1 id selector 모두 color를 다르게 지정했는데,
+           id selector로 지정한 color의 우선순위가 내부적으로 높아서 id selector 지정한
+           color를 화면에 적용함  => cascading rule */
+           /* id selector는 html 문서 전체에서 오직 한개의 element만 해당 */
+        #para1 {
+            font-size: 40px;
+            color: blue;
+        }
+        /* . : class를 의미, center는 class attribute의 값이 center인 모든 tag들에 적용 */
+        .center{
+            background-color: aquamarine;
+            font-size: 60px;
+            text-align: right;
+        }
+        /* * :universal selector : 모든 tag들을 선택
+           용도 : 모든 tag들에게 공통적으로 적용하는 style을 지정할 때 사용 */
+        *{
+            background-color: blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>Every paragraph will be affected by the style.</p>
+    <p id="para1">Me too!</p>
+    <p>And me!</p>
+    <h1 class="center">Red and center-aligned heading</h1>
+    <p class="center">Red and center-aligned paragraph.</p>
+</body>
+</html>

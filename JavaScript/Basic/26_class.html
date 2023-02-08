@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES5 class 사용 방법</h1>
+    <p id="demo"></p>   
+    
+
+
+
+    <script>
+        // function constructor : 함수 이름이 항상 첫 글자를 대문자로 시작 (java class naming과 동일)
+        // 1. 모든 field를 this를 사용하여 표현함
+        // 2. new function_constructor() 사용 => 예) new User('Roy' , '19' , 'Male')
+        //   =>  return값이 object로 됨 => 예)  const Roy = new User('Roy' , '19' , 'Male'); => Roy가 object가 됨
+        // 3. 문제점 : 
+        //     1) java와 같이 priate, public 등 access modfier 존재 안함 (전부 public임)
+        //     2) method 가 new로 object 만들 때 마다 새로 생성됨 (memory 낭비 심함)
+        //     3) 부모 자식가느이 상속관계를 만드는데 코딩양이 많고 복잡함
+        //     4) 개발자의 코딩 생산성이 매우 낮음
+        //
+        function User(name, age, gender){
+            this.age = age;
+            this.name = name;
+            this.gender = gender;
+            this.print = function () {
+                return(
+                    `${this.name} has an age of ${this.age}
+                    and gender of ${this.gender}`
+
+                );
+            };
+        }
+
+        const Roy = new User('Roy' , '19' , 'Male');
+        //  Roy.print();
+
+         document.getElementById("demo").innerHTML = Roy.print();
+    </script>
+</body>
+</html>

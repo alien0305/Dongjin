@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Properties</h1>
+    <h2>The constructor Property</h2>
+
+    <p>The constructor property returns the constructor function for a variable or an 
+    object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    // data type 을 검사 할 때 type of 를 사용하지말고 constructor 사용 권장
+    // constructor => java의 class와 같은 개념으로, functio 선언한 것으로 function constructor 라고 부르고
+    //                new로 object를 만듬  (new Array() => object)
+    document.getElementById("demo").innerHTML = 
+    "john".constructor + "<br>" +   // string constructor => function String() {}
+    (3.14).constructor + "<br>" +   // number constructor => function Number() {}
+    false.constructor + "<br>" +    // boolean constructor => function Boolean() {}
+    [1,2,3,4].constructor + "<br>" + // array constructor => function Array() {}
+    {name:'john', age:34}.constructor + "<br>" + // object constructor => function Object() {}
+    new Date().constructor + "<br>" + //date constructor => function Date() {}
+    function () {}.constructor; // function constructor => function Function() {}
+    </script>
+</body>
+</html>

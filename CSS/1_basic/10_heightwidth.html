@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    div.percent {
+        height: 50px;
+        /* 100% : 전체 화면 크기 */
+        /* width: 100%; */
+        /* width: 50%; */
+        /* 50% : 전체 화면 크기의 50%라는 의미, HW크기 종류가 다르더라도
+                 해당 HW화면 크기의 50%를 사용한다는 의미 */
+                 width: 200px;
+        border: 1px solid #4CAF50;
+      }
+      div.maxwidth {
+        /* maxwidth : width의 최대 크기가 1000px이라는 의미, window size가 작아지면 width도
+           같이 작아짐 */
+  max-width: 1000px;
+  height: 100px;
+  background-color: powderblue;
+}
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>CSS height and width properties</h2>
+
+<div class="percent">This div element has a height of 50 pixels and a width of 100%.</div>
+
+<h2>Set the max-width of an element</h2>
+
+<div class="maxwidth">This div element has a height of 100px and a max-width of 500px.</div>
+
+<p>Resize the browser window to see the effect.</p>
+</body>
+</html>

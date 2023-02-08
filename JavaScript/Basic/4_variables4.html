@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../scripts/myScript.js">
+
+    </script> -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // const keyword 사용 : es6(2015년)
+    const x = 5;
+    const y = 6;
+    // 1. const 는 변수에 대해서 중복 선언 불가능
+    // 2. const 는 상수를 선언 할 때 사용 (static final)
+    // 3. const 로 선언된 변수에 다른 값을 넣으면 에러 발생됨 (web browser development tool 에서 확인)
+    // 4. old web browser에서는 let, const를 사용 못하고 var 만 사용 가능할 경우에는
+    //    let, const로 만든 es6 javascript file을 var을 사용한 es 5 js파일로 자동 transfer 해주는
+    //    tool (예 : babel)을 사용하면 됨
+    // cosnt x = 10;
+    const z = x + y + 0.5;
+    // z = 12;
+    // z = "hello, javascript";
+    document.getElementById("demo").innerHTML =
+    "The value of z is: " + z;
+    document.getElementById("demo1").innerHTML =
+    "type of z :  " + typeof z;
+    </script>
+
+</body>
+</html>

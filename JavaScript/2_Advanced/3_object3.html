@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Getters and Setters</h2>
+
+    <p>Getters and setters allow you to get and set object properties via methods.</p>
+    
+    <p>This example uses a lang property to get the value of the language property:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    // javascript accessor :
+    // => setter, getter 사용 목적 : 
+    // 1. method 사용하는 것보다 간결하기 때문
+    // 2. function 내부에서 다양한 프로그래밍 가능
+    // Create an object:
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      language: "kr",
+    //   getLang : function() {
+    //     return this.language;
+    //   },
+    //   setLang : function(lang) {
+    //     this.language = lang;
+    //   }
+      // lang property 의 getter 선언
+      get lang() {
+        return this.language;
+      },
+      // lang property 의 setter 선언
+      set lang(lang) {
+        this.language = lang;
+      }      
+    };
+    
+    // person lang property(가상의 property)의 "korea"를 setting
+    person.lang = "korea";
+    // person.setLang("korea");
+    // Display data from the object using a getter:
+    // person.lang 을 실행 하면, javascript engine이 get lang()으로 선언된 getter function 실행
+    document.getElementById("demo").innerHTML = person.lang;
+    // document.getElementById("demo").innerHTML = person.getLang();
+    // document.getElementById("demo").innerHTML = person.language;
+    </script>   
+</body>
+</html>

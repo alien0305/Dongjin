@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Callback</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+    
+    <h1 id="demo"></h1>
+    <h1 id="demo1"></h1>
+    
+    <script>
+    // setTimeout gloval function : asynchronous 방식을 지원 하는 함수
+    // - myfunction을 3000ms(3초) 후에 실행 하라는 명령어
+    // - 문제점 : 정확하게 3초후에 실행되진 않음 (다른 명령어와 겹치면,, )
+    // setTimeout(myFunction, 3000);
+    setTimeout(function() {document.getElementById("demo").innerHTML = "I love you!!";} , 3000);
+    
+    // function myFunction() {
+    //   document.getElementById("demo").innerHTML = "I'll see You !!";
+    // }
+    document.getElementById("demo1").innerHTML = "Before SetTimeout function execution";
+    </script>
+</body>
+</html>

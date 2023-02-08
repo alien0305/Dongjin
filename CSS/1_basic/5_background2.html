@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+          background-color: green;
+        }
+        
+        div.first {
+            /* opacity(투명도) : 0~1사이의값, 0인경우는 보이지 않음, 
+            1인경우는 원래 color가 화면에 보임, default값은 1 */
+          opacity: 0.1;
+        }
+        
+        div.second {
+          opacity: 0.3;
+        }
+        
+        div.third {
+          opacity: 0.6;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Transparent Boxes</h1>
+
+    <p>When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+
+    <div class="first">
+    <h1>opacity 0.1</h1>
+    </div>
+
+    <div class="second">
+    <h1>opacity 0.3</h1>
+    </div>
+
+    <div class="third">
+    <h1>opacity 0.6</h1>
+    </div>
+
+    <div>
+    <h1>opacity 1 (default)</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    // 1. $(doucument) => object dat type return 하고 method인 ready()를 실행
+    // -ready(callback function) : onload event를 의미하고, onload event 발생시 parameter로 넘긴
+    //                             callback 함수를 실행함.
+    // 2. $("p") => $("css selector 사용") => css selector에 해당하는 js object를 return
+    //   -click (callback function) : click event 발생할 때  callback function을 실행
+    //     => addEventListener(click , function(){});
+    //    $("p")에 해당하는 모든 object 들에 대하여 click event를 등록시켜 줌
+    // 3. $(this) : event 가 발생항 해당 p object를 의미
+    //    - hide() => display:none 을 구현
+    $(document).ready(
+        function(){
+            $("p").click(
+                function(){
+                    $(this).hide();
+                }
+            );
+        }
+    );
+    // $(document).ready(function(){
+    // $("p").click(function(){
+    //     $(this).hide();
+    // });
+    // });
+</script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <script>
+    </script>
+</body>
+</html>

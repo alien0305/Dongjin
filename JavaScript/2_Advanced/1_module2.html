@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Modules</h1>
+
+    <p id="demo"></p>
+    
+    <!-- 외부 module 을 사용 할 때 <script type="module"> 을 타이핑 해줘야함 -->
+    <script type="module">
+    // export default 로 선언된 변수, 함수들은 중괄호 {} 사용 없이 직접 가져올 수 있음
+    import message from "../scripts/message.js";
+    // message함수기 때문에 () 써서 사용
+    document.getElementById("demo").innerHTML = message();
+    
+    </script>
+</body>
+</html>

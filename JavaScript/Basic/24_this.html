@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The JavaScript <i>this</i> Keyword</h1>
+    <p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+    <p>Because <b>fullName</b> is a method of the person object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    // Create an object:
+    const person = {
+        firstName: "John",   //property
+        lastName: "Doe",   //property
+        id: 5566,   //property
+        fullName : function() { //method
+            // 1. this의 첫번째 의미 : method 에서 this 사용한 경우
+            //  - this 는 fullname method를 호출한 객체(object)를 의미
+            //  - 만약 person.fullName()으로 코딩 했으면 , this.firstName은 person.firstName과 동일 => "john" 의 값을 갖음
+            return this.firstName + " " + this.lastName;
+    }
+    };
+
+    // Display data from the object:
+    document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Redeclaring a Variable Using let</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+    var a = 10;
+    // let a = 20;
+    document.getElementById("demo1").innerHTML = a;
+    // 이미 error 가 난 상태로 동작자체는 되지만 실행은 안되고 이 아랫부분 역시 실행 되지않는다.
+    // var 로 선언된 변수 a를 다시 let으로 선언하는 것이 허용되지 않음.
+
+
+    let x = 10; // global variable
+    // let x = 5; // 당연히 error 발생
+    {
+    // block scope에서 선언된 x는 global scope에서 선언된 변수 x와 이름은 같지만
+    // block scope에서 동작할 때는 다른 변수로 취급되어 메모리에 올라가서 사용 된다.
+    let x = 2; // local variable
+    document.getElementById("demo2").innerHTML = x;
+    }
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+</body>
+</html>

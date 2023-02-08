@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Class Gettter/Setter</h2>
+
+    <p>A demonstration of how to add getters and setters in a class, and how to use the getter to get the property value.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+      // getter method
+      // cnam : 마치 property 처럼 쓰는 것
+      get cnam() {
+        return this.carname;
+      }
+      // setter method
+      set cnam(x) {
+        this.carname = x;
+      }
+    }
+    
+    let myCar = new Car("Ford");
+    
+    document.getElementById("demo").innerHTML = myCar.cnam;
+    </script>
+</body>
+</html>

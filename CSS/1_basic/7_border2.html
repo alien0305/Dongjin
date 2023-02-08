@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p.one {
+          border-top-style: solid;
+          border-right-style: double;
+          border-bottom-style: dashed;
+          border-left-style: solid;
+          /* top,right,left,bottom : 모두 5px */
+          /* border-width: 5px; */
+          /* top : 5px , right : 20px, bottom은 top의 값을 복사 : 5px, left는 right값 복사 : 20px */
+          /* border-width: 5px 20px;  */
+          /* top : 5px , right : 20px, bottom : 10px , left : 20px */
+          /* border-width: 5px 20px 10px;  */
+          /* top : 5px , right : 20px , bottom : 10px , left : 30px */
+          border-width: 5px 20px 10px 30px; 
+          /* 순서는 항상 top,right,bottom,left 순임 */
+          border-color: red green yellow black;
+        }
+        
+        p.two {
+          border: 5px solid red;
+          /* border-style: solid;
+          border-width: medium; */
+        }
+        
+        p.three {
+          border-style: dotted;
+          border-width: 2px;
+        }
+        
+        p.four {
+          border-style: dotted;
+          border-width: thick;
+        }
+        
+        p.five {
+          border-style: double;
+          border-width: 15px;
+        }
+        
+        p.six {
+          border-style: double;
+          border-width: thick;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>The border-width Property</h2>
+<p>This property specifies the width of the four borders:</p>
+
+<p class="one">Some text.</p>
+<p class="two">Some text.</p>
+<p class="three">Some text.</p>
+<p class="four">Some text.</p>
+<p class="five">Some text.</p>
+<p class="six">Some text.</p>
+
+<p><b>Note:</b> The "border-width" property does not work if it is used alone. 
+Always specify the "border-style" property to set the borders first.</p>
+</body>
+</html>

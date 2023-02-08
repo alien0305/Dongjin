@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript apply()</h2>
+    <p>This example returns the highest number in an array of numbers:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    // array를 Math.max method를 활용하고 싶은 경우 (원래는 max method는 parater로 array를 받지않고 개별로 받음)
+    // apply method를 사용하여 해결 (객체를 넘기는 것은 의미가 없기 때문에 null로 처리)
+    // 
+    document.getElementById("demo").innerHTML = Math.max.apply(null, [1,2,3,4,5,10]); 
+    </script>  
+</body>
+</html>

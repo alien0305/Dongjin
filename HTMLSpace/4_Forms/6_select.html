@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The select Element</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form action="https://www.w3schools.com/html/action_page.jsp">
+  <label for="cars">Choose a car:</label>
+  <!-- server에 데이터 전송방식 키=value, 
+    =>  키는 select tag의 name값,
+       value는 option tag들 중에 선택된 tag의 value값을 의미 -->
+  <!-- size : 화면에 보이는 option 갯수,
+       multiple : server에 여러개의 option 값을 전송 가능 -->
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br>
+  <!-- 여러 line 텍스트를 입력하여 서버로 전송할 때 사용
+       rows="10" => 행이 10 line을 보여달라, cols="30" => column 크기가 30byte입력크기로
+       보여달라 -->
+  <textarea name="message" rows="30" cols="50">
+    The cat was playing in the garden.
+  </textarea>
+  <br><br>
+  <!-- button tag : button을 만드는 tag -->
+  <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+  <br>
+  <input type="submit">
+</form>
+</body>
+</html>

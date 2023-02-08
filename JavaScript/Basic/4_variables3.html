@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../scripts/myScript.js">
+
+    </script> -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        // let keyword 사용 : es6(2015년)
+    let x;
+    x = 20;
+    let y = 6;
+    // 1. let은 변수에 대해서 중복 선언 불가능
+    // 2. var 대신에 let을 반드시 사용 할 것
+    
+    // let x = 10;
+    let z = x + y + 0.5;
+ 
+    // z = "hello, javascript";
+
+    // 변수만 선언한 경우 => undefined type이 된다.
+    // 직접 undefined 선언도 물론 가능
+    let sum; // sum에 literal 값 등이 없고 변수만 선언한 상태
+    let sum2 = undefined;
+    document.getElementById("demo").innerHTML =
+    "The value of z is: " + z;
+    document.getElementById("demo1").innerHTML =
+    "type of z :  " + typeof z;
+    document.getElementById("demo2").innerHTML =
+    "type of z :  " + typeof sum;
+    document.getElementById("demo3").innerHTML =
+    "type of z :  " + typeof sum2;
+    </script>
+
+</body>
+</html>

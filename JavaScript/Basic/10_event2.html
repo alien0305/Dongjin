@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>mouseover event 실습</h2>
+
+    <!-- onmouseover : mouse가 element위에 있을 경우에 event가 발생
+         onmouseout  : mouse가 element위에 있다가 element밖으로 나갈때 event가 발생 -->
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+     src="../images/smiley.gif" alt="Smiley" width="32" height="32">
+
+    <p>The function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
+    <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+
+    <script>
+    function bigImg(x) {
+        x.style.height = "1164px";
+        x.style.width = "1164px";
+    }
+
+    function normalImg(x) {
+        x.style.height = "132px";
+        x.style.width = "132px";
+    }
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz01</title>
+    <style>
+        table, th, td {
+            margin: auto;
+            border: 1px double;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/webDeveloper.png">
+    <br>
+    <h1>About</h1>
+    <p>It can be intimidating for women to learn and ask questions when they
+        are in an <b>extreme minority.</b> While open and welcoming, today's
+        budding developer community is up to <b>91% male.</b>
+        If we can empower more females with the confidence in thire technological
+        capabilities <i>we can begin to change the landscape.</i>
+    </p>
+    <br>
+    <h2>Our Locations</h2>
+    <ul style="list-style-type: disc;">
+        <li>USA</li>
+        <ul>
+            <a href="https://www.naver.com" target="_blank"><li>New York</a></li>
+            <a href="https://www.naver.com" target="_blank"><li>Columbus</a></li>
+            <a href="https://www.naver.com" target="_blank"><li>Austin</a></li>
+            <a href="https://www.naver.com" target="_blank"><li>Phily</a></li>
+        </ul>
+    </ul>
+    <ul style="list-style-type: disc;">
+        <li>World</li>
+        <ul>
+            <a href="https://www.naver.com" target="_blank"><li>Ottawa</a></li>
+            <a href="https://www.naver.com" target="_blank"><li>Sydney</a></li>
+        </ul>
+    </ul>
+    <br>
+    <h2>Upcoming Classes</h2>
+    <table>
+        <tr>
+            <th><b>Location</b></th>
+            <th><b>Topic</b></th>
+        </tr>
+        <tr>
+            <td>New York</td>
+            <td>Javascript & JQuery</td>
+        </tr>
+        <tr>
+            <td>San Francisco</td>
+            <td>HTML & CSS</td>
+        </tr>
+    </table>
+    <br>
+    <h2>Sign Up!</h2>
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="location">Location:</label>
+        <select name="location" id="location">
+            <option value="San Francisco">San Francisco</option>
+            <option value="New York">New York</option>
+        </select>
+        <fieldset>
+            <legend>Gender:</legend>
+            <input type="radio" id="gender" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="gender" name="gender" value="Female">
+            <label for="Female">Female</label>
+        </fieldset>
+        <label for="experience">Experience:</label>
+        <br>
+        <textarea name="experience" id="experience" cols="20" rows="3"></textarea>
+        <br>
+        <input type="submit" value="Sign up">
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Objects</h2>
+
+    <p>The prototype property allows you to add new methods to objects constructors:</p>
+    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    
+    <script>
+    // prototype 객체에 property, method를 추가하는 목적
+    // => prototype 객체가 java의 class 개념과 동일, 즉 java에서 new ClassName()으로 객체 생성하면
+    //    method는 객체마다 생성되는 것이 아니라 1개만 생성
+    // => 마찬가지 개념으로 prototype 객체에 method를 추가하면 new로 object 생성할때마다 
+    //    method가 추가로 생성되지 않음
+    function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+      this.fullName = function() {};
+    }
+    
+    // Person function constructor의 prototype 객체(object data tpye)의 속성(property)으로
+    // nationality를 새로 추가
+    Person.prototype.nationality = "English";
+    
+    //
+    Person.prototype.name = function() {
+     return this.firstName + " " + this.lastName;
+    };
+
+    // Person function constructor의 object를 생성 (myFather)
+    // Person 의 new로 만든 객체는 prototype에 추가된 property가 자동으로 따라옴
+    const myFather = new Person("John", "Doe", 50, "blue");
+    document.getElementById("demo").innerHTML =
+    "The nationality of my father is " + myFather.nationality; 
+
+    document.getElementById("demo1").innerHTML =
+    "My father is " + myFather.name(); 
+    </script>
+    
+</body>
+</html>
